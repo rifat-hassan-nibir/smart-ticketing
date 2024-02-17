@@ -13,6 +13,22 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Tailwind Custom Styles -->
+    <!-- Tailwind Custom styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "theme-color": "#1DD100",
+              "title-color": "#030712",
+              "description-color": "#03071299",
+            },
+          },
+        },
+      };
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,8 +44,66 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
-    <h1>Hello</h1>
+  <!-- Body Stats Here -->
+  <body class="container mx-auto font-raleway">
+    <header class="container mx-auto relative px-5 lg:px-0">
+      <!-- Navbar -->
+      <div class="my-4 lg:my-12">
+        <div class="navbar p-0 bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn p-0 mr-3 btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li class="text-sm font-normal"><a>Home</a></li>
+                <li class="text-sm font-normal"><a>About</a></li>
+                <li class="text-sm font-normal"><a>Destination</a></li>
+                <li class="text-sm font-normal"><a>Search</a></li>
+              </ul>
+            </div>
+            <h1 class="text-2xl lg:text-4xl font-extrabold">P-Ticket</h1>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="text-lg font-medium"><a>Home</a></li>
+              <li class="text-lg font-medium"><a>About</a></li>
+              <li class="text-lg font-medium"><a>Destination</a></li>
+              <li class="text-lg font-medium"><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end gap-6">
+            <button
+              class="bg-[#1dd10019] text-theme-color text-lg lg:text-xl font-bold py-2 px-4 lg:py-4 lg:px-[30px] rounded-lg"
+            >
+              Bus <img class="inline-block ml-[10px]" src="images/bus-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section Starts Here -->
+    <main></main>
+
+    <!-- Footer Section Starts Here -->
+    <footer></footer>
     <!-- Javascript -->
     <script src="script.js"></script>
   </body>
