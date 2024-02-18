@@ -26,7 +26,7 @@ for (const seat of seats) {
       const newTicketDetailsDiv = document.createElement("div");
       newTicketDetailsDiv.classList.add("grid", "grid-cols-12", "mt-4");
       newTicketDetailsDiv.innerHTML = `
-        <p class="col-span-5 font-inter text-base text-description-color text-[#030712]">Seat</p>
+        <p class="col-span-5 font-inter text-base text-description-color text-[#030712]">${seat.innerText}</p>
         <p class="col-span-5 font-inter text-base text-description-color text-[#030712]">Economy</p>
         <p class="col-span-2 font-inter text-base text-right text-description-color text-[#030712]">550</p>
         `;
@@ -46,34 +46,49 @@ const couponButton = document.getElementById("coupon-field-button");
 const couponField = document.getElementById("coupon-field");
 const couponArea = document.getElementById("coupon-area");
 couponField.addEventListener("keyup", function (e) {
-  if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
-    couponButton.removeAttribute("Disabled");
-    couponButton.classList.add("bg-theme-color");
-    if (e.target.value === "NEW15") {
-      couponButton.addEventListener("click", function () {
-        const discountedPrice = totalPrice * 0.15;
-        const newPrice = totalPrice - discountedPrice;
-        const priceSummary = document.getElementById("price-summary");
-        const discountedPriceDiv = document.createElement("div");
-        discountedPriceDiv.innerHTML = `
-        <div class="flex justify-between mt-4">
-          <p class="font-inter text-base font-semibold text-[#030712]">Discounted Price</p>
-          <p class="font-inter text-base font-semibold text-[#030712]">BDT ${discountedPrice}</p>
-        </div>
-        `;
-        priceSummary.appendChild(discountedPriceDiv);
-        setInnerTextById("grand-total-price", newPrice);
-        couponArea.classList.add("hidden");
-      });
-    } else if (e.target.value === "Couple 20") {
-      couponButton.addEventListener("click", function () {
-        const discountedPrice = totalPrice * 0.2;
-        const newPrice = totalPrice - discountedPrice;
-        setInnerTextById("grand-total-price", newPrice);
-      });
+  if (totalPrice === 2200) {
+    if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
+      couponButton.removeAttribute("Disabled");
+      couponButton.classList.add("bg-theme-color");
+      if (e.target.value === "NEW15") {
+        couponButton.addEventListener("click", function () {
+          const discountedPrice = totalPrice * 0.15;
+          const newPrice = totalPrice - discountedPrice;
+          const priceSummary = document.getElementById("price-summary");
+          const discountedPriceDiv = document.createElement("div");
+          discountedPriceDiv.innerHTML = `
+          <div class="flex justify-between mt-4">
+            <p class="font-inter text-base font-semibold text-[#030712]">Discounted Price</p>
+            <p class="font-inter text-base font-semibold text-[#030712]">BDT ${discountedPrice}</p>
+          </div>
+          `;
+          priceSummary.appendChild(discountedPriceDiv);
+          setInnerTextById("grand-total-price", newPrice);
+          couponArea.classList.add("hidden");
+        });
+      } else if (e.target.value === "Couple 20") {
+        couponButton.addEventListener("click", function () {
+          const discountedPrice = totalPrice * 0.2;
+          const newPrice = totalPrice - discountedPrice;
+          const priceSummary = document.getElementById("price-summary");
+          const discountedPriceDiv = document.createElement("div");
+          discountedPriceDiv.innerHTML = `
+          <div class="flex justify-between mt-4">
+            <p class="font-inter text-base font-semibold text-[#030712]">Discounted Price</p>
+            <p class="font-inter text-base font-semibold text-[#030712]">BDT ${discountedPrice}</p>
+          </div>
+          `;
+          priceSummary.appendChild(discountedPriceDiv);
+          setInnerTextById("grand-total-price", newPrice);
+          couponArea.classList.add("hidden");
+          setInnerTextById("grand-total-price", newPrice);
+        });
+      }
+    } else {
+      couponButton.setAttribute("Disabled", true);
+      couponButton.classList.remove("bg-theme-color");
     }
   } else {
-    couponButton.setAttribute("Disabled", true);
-    couponButton.classList.remove("bg-theme-color");
+    alert("Select 4 tickets to get discount");
   }
 });
