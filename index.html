@@ -358,15 +358,17 @@
 
                   <!-- Total Price Section -->
                   <!-- //////////////////////////////////////////////////////////////// -->
-                  <div class="flex justify-between">
-                    <p class="font-inter text-base font-semibold text-[#030712]">Total Price</p>
-                    <p class="font-inter text-base font-semibold text-[#030712]">
-                      BDT <span id="total-price">00</span>
-                    </p>
+                  <div id="price-summary">
+                    <div class="flex justify-between">
+                      <p class="font-inter text-base font-semibold text-[#030712]">Total Price</p>
+                      <p class="font-inter text-base font-semibold text-[#030712]">
+                        BDT <span id="total-price">00</span>
+                      </p>
+                    </div>
                   </div>
 
                   <!-- Coupon Field -->
-                  <div class="flex justify-between gap-3 p-2 bg-white rounded-xl mt-4 mb-6">
+                  <div id="coupon-area" class="flex justify-between gap-3 p-2 bg-white rounded-xl mt-4 mb-6">
                     <input
                       id="coupon-field"
                       class="flex-1 h-[40px] px-4 focus-within:outline-none"
@@ -376,14 +378,14 @@
                     <button
                       disabled
                       id="coupon-field-button"
-                      class="bg-theme-color text-base font-semibold text-white px-[18px] rounded-xl"
+                      class="bg-gray-400 text-base font-semibold text-white px-[18px] rounded-xl"
                     >
                       Apply
                     </button>
                   </div>
 
                   <!-- Grand Total -->
-                  <div class="flex justify-between">
+                  <div class="flex justify-between mt-4">
                     <p class="font-inter text-base font-semibold text-[#030712]">Grand Total</p>
                     <p class="font-inter text-base font-semibold text-[#030712]">
                       BDT <span id="grand-total-price">00</span>
