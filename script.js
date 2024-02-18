@@ -54,15 +54,7 @@ couponField.addEventListener("keyup", function (e) {
         couponButton.addEventListener("click", function () {
           const discountedPrice = totalPrice * 0.15;
           const newPrice = totalPrice - discountedPrice;
-          const priceSummary = document.getElementById("price-summary");
-          const discountedPriceDiv = document.createElement("div");
-          discountedPriceDiv.innerHTML = `
-          <div class="flex justify-between mt-4">
-            <p class="font-inter text-base font-semibold text-[#030712]">Discounted Price</p>
-            <p class="font-inter text-base font-semibold text-[#030712]">BDT ${discountedPrice}</p>
-          </div>
-          `;
-          priceSummary.appendChild(discountedPriceDiv);
+          priceSummaryDiv(0.15);
           setInnerTextById("grand-total-price", newPrice);
           couponArea.classList.add("hidden");
         });
@@ -70,15 +62,7 @@ couponField.addEventListener("keyup", function (e) {
         couponButton.addEventListener("click", function () {
           const discountedPrice = totalPrice * 0.2;
           const newPrice = totalPrice - discountedPrice;
-          const priceSummary = document.getElementById("price-summary");
-          const discountedPriceDiv = document.createElement("div");
-          discountedPriceDiv.innerHTML = `
-          <div class="flex justify-between mt-4">
-            <p class="font-inter text-base font-semibold text-[#030712]">Discounted Price</p>
-            <p class="font-inter text-base font-semibold text-[#030712]">BDT ${discountedPrice}</p>
-          </div>
-          `;
-          priceSummary.appendChild(discountedPriceDiv);
+          priceSummaryDiv(0.2);
           setInnerTextById("grand-total-price", newPrice);
           couponArea.classList.add("hidden");
           setInnerTextById("grand-total-price", newPrice);
