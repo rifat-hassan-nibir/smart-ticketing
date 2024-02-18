@@ -309,9 +309,9 @@
                   <!-- Seats Row -->
                   <!-- Driver -->
                   <div class="flex justify-end">
-                    <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                    <div class="bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
                       <img src="images/driver.png" alt="" />
-                    </button>
+                    </div>
                   </div>
                   <!-- First Row -->
                   <div class="flex justify-between">
@@ -367,6 +367,62 @@
                 <hr class="my-6 border-dashed border-[#03071233]" />
 
                 <!-- Coupon Area -->
+                <div class="bg-[#F7F8F8] p-8 rounded-xl">
+                  <div class="grid grid-cols-12">
+                    <p class="col-span-5 font-inter text-base font-semibold text-[#030712]">
+                      Seat<sup
+                        id="selected-seats-count"
+                        class="bg-theme-color text-white px-2 rounded"
+                        >2</sup
+                      >
+                    </p>
+                    <p class="col-span-5 font-inter text-base font-semibold text-[#030712]">
+                      Class
+                    </p>
+                    <p
+                      class="col-span-2 font-inter text-right text-base font-semibold text-[#030712]"
+                    >
+                      Price
+                    </p>
+                  </div>
+
+                  <hr class="my-4 border-dashed border-[#03071233]" />
+
+                  <div class="grid grid-cols-12">
+                    <p
+                      class="col-span-5 font-inter text-base text-description-color text-[#030712]"
+                    >
+                      Seat
+                    </p>
+                    <p
+                      class="col-span-5 font-inter text-base text-description-color text-[#030712]"
+                    >
+                      Economy
+                    </p>
+                    <p
+                      class="col-span-2 font-inter text-base text-right text-description-color text-[#030712]"
+                    >
+                      550
+                    </p>
+                  </div>
+
+                  <hr class="my-4 border-solid border-[#03071233]" />
+
+                  <!-- Total Price Section -->
+                  <!-- //////////////////////////////////////////////////////////////// -->
+                  <div class="flex justify-between">
+                    <p class="font-inter text-base font-semibold text-[#030712]">Total Price</p>
+                    <p class="font-inter text-base font-semibold text-[#030712]">
+                      BDT <span id="total-price">1100</span>
+                    </p>
+                  </div>
+
+                  <!-- Coupon Field -->
+                  <div>
+                    <input type="text" placeholder="Have you any coupon?" />
+                    <button class="bg-theme-color">Apply</button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
