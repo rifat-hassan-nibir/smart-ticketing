@@ -35,6 +35,9 @@ for (const seat of seats) {
       // Updating total price
       totalPrice += 550;
       setInnerTextById("total-price", totalPrice);
+      setInnerTextById("grand-total-price", totalPrice);
+
+      // Cannot select more than 4 seats
     } else {
       alert("You cannot select more than 4 seats");
     }
@@ -45,10 +48,11 @@ for (const seat of seats) {
 const couponButton = document.getElementById("coupon-field-button");
 const couponField = document.getElementById("coupon-field");
 const couponArea = document.getElementById("coupon-area");
+
 couponField.addEventListener("keyup", function (e) {
   if (totalPrice === 2200) {
     if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
-      couponButton.removeAttribute("Disabled");
+      couponButton.removeAttribute("disabled");
       couponButton.classList.add("bg-theme-color");
       if (e.target.value === "NEW15") {
         couponButton.addEventListener("click", function () {
@@ -69,10 +73,22 @@ couponField.addEventListener("keyup", function (e) {
         });
       }
     } else {
-      couponButton.setAttribute("Disabled", true);
+      couponButton.setAttribute("disabled", true);
       couponButton.classList.remove("bg-theme-color");
     }
   } else {
     alert("Select 4 tickets to get discount");
+  }
+});
+
+// Form Functionality
+const formNumberField = document.getElementById("form-number");
+const formSubmitButton = document.getElementById("form-submit-button");
+
+formSubmitButton.addEventListener("click", function () {
+  if (totalPrice === 0 || formNumberField.value.length !== 11) {
+    alert("Select at least 1 seat and enter a phone number with 11 digits");
+  } else {
+    alert("Form Submitted");
   }
 });

@@ -218,7 +218,7 @@
               </div>
 
               <!-- Journy Description -->
-              <div class="bg-[#F7F8F8] mt-6 p-7 rounded-[32px]">
+              <div class="bg-[#F7F8F8] mt-6 p-8 rounded-[32px]">
                 <div class="flex justify-between">
                   <p class="text-description-color text-lg font-bold">Route</p>
                   <p class="text-lg font-bold text-[#030712]">Dhaka - Sylhet</p>
@@ -396,30 +396,34 @@
                 <!-- Form Area -->
                 <!-- ///////////////////////////////////////////////////////////////////////// -->
                 <div>
-                  <p class="font-inter text-base font-semibold text-[#030712]">Passenger Name*</p>
-                  <input
-                    type="text"
-                    class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
-                    placeholder="Enter your name"
-                  />
-                  <p class="font-inter text-base font-semibold text-[#030712]">Phone Number*</p>
-                  <input
-                    type="text"
-                    class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
-                    placeholder="Enter your phone number"
-                  />
-                  <p class="font-inter text-base font-semibold text-[#030712]">Email ID</p>
-                  <input
-                    type="text"
-                    class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
-                    placeholder="Enter your email id"
-                  />
+                  <form action="">
+                    <p class="font-inter text-base font-semibold text-[#030712]">Passenger Name</p>
+                    <input
+                      id="form-name"
+                      type="text"
+                      class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
+                      placeholder="Enter your name"
+                    />
+                    <p class="font-inter text-base font-semibold text-[#030712]">Phone Number*</p>
+                    <input
+                      id="form-number"
+                      type="number"
+                      class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
+                      placeholder="Enter your phone number"
+                    />
+                    <p class="font-inter text-base font-semibold text-[#030712]">Email ID</p>
+                    <input
+                      id="form-email"
+                      type="email"
+                      class="h-[70px] p-6 border-2 border-[#03071219 ] rounded-xl w-full mt-4 mb-6"
+                      placeholder="Enter your email id"
+                    />
+                  </form>
 
                   <!-- Form Submit Button -->
                   <button
-                    disabled
                     id="form-submit-button"
-                    class="text-xl font-extrabold bg-theme-color text-white py-5 rounded-2xl w-full mb-6"
+                    class="bg-theme-color text-xl font-extrabold text-white py-5 rounded-2xl w-full mb-6"
                   >
                     Next
                   </button>
