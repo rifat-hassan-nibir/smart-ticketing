@@ -41,11 +41,6 @@ for (const seat of seats) {
       setInnerTextById("total-price", totalPrice);
       setInnerTextById("grand-total-price", totalPrice);
 
-      // Form submit button enable when there is number already entered and seat selected after that
-      if (totalPrice > 0 && formNumberField.value.length === 11) {
-        formSubmitButton.classList.add("bg-theme-color");
-      }
-
       // Cannot select more than 4 seats
     } else {
       alert("You cannot select more than 4 seats");
@@ -63,7 +58,6 @@ couponField.addEventListener("keyup", function (e) {
   if (seatCount === 4) {
     if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
       couponButton.removeAttribute("disabled");
-      couponButton.classList.add("bg-theme-color");
       if (e.target.value === "NEW15") {
         couponButton.addEventListener("click", function () {
           const discountedPrice = totalPrice * 0.15;
@@ -84,7 +78,6 @@ couponField.addEventListener("keyup", function (e) {
       }
     } else {
       couponButton.setAttribute("disabled", true);
-      couponButton.classList.remove("bg-theme-color");
     }
   } else {
     couponField.value = "";
@@ -93,19 +86,6 @@ couponField.addEventListener("keyup", function (e) {
 });
 
 // Form Functionality
-
-// First select seat and then enter mobile number to enable submit button
-formNumberField.addEventListener("keyup", function (e) {
-  if (e.target.value.length === 11) {
-    for (const seat of seats) {
-      if (seat.classList.contains("selected")) {
-        formSubmitButton.classList.add("bg-theme-color");
-      }
-    }
-  } else {
-    formSubmitButton.classList.remove("bg-theme-color");
-  }
-});
 
 formSubmitButton.addEventListener("click", function () {
   if (totalPrice === 0 || formNumberField.value.length !== 11) {
