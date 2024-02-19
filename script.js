@@ -3,6 +3,10 @@
 let seatCount = 0;
 let availableSeats = 40;
 let totalPrice = 0;
+
+const formNumberField = document.getElementById("form-number");
+const formSubmitButton = document.getElementById("form-submit-button");
+
 const seats = document.getElementsByClassName("seats");
 
 for (const seat of seats) {
@@ -36,6 +40,11 @@ for (const seat of seats) {
       totalPrice += 550;
       setInnerTextById("total-price", totalPrice);
       setInnerTextById("grand-total-price", totalPrice);
+
+      // Form submit button enable when there is number already entered and seat selected after that
+      if (totalPrice > 0 && formNumberField.value.length === 11) {
+        formSubmitButton.classList.add("bg-theme-color");
+      }
 
       // Cannot select more than 4 seats
     } else {
@@ -82,8 +91,17 @@ couponField.addEventListener("keyup", function (e) {
 });
 
 // Form Functionality
-const formNumberField = document.getElementById("form-number");
-const formSubmitButton = document.getElementById("form-submit-button");
+
+// First select seat and then enter mobile number to enable submit button
+formNumberField.addEventListener("keyup", function (e) {
+  if (e.target.value.length === 11) {
+    for (const seat of seats) {
+      if (seat.classList.contains("selected")) {
+        formSubmitButton.classList.add("bg-theme-color");
+      }
+    }
+  }
+});
 
 formSubmitButton.addEventListener("click", function () {
   if (totalPrice === 0 || formNumberField.value.length !== 11) {
