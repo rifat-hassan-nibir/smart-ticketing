@@ -60,7 +60,7 @@ const couponField = document.getElementById("coupon-field");
 const couponArea = document.getElementById("coupon-area");
 
 couponField.addEventListener("keyup", function (e) {
-  if (totalPrice > 2100) {
+  if (seatCount === 4) {
     if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
       couponButton.removeAttribute("disabled");
       couponButton.classList.add("bg-theme-color");
