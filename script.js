@@ -54,12 +54,13 @@ for (const seat of seats) {
 }
 
 // Appiying coupon code
+
 const couponButton = document.getElementById("coupon-field-button");
 const couponField = document.getElementById("coupon-field");
 const couponArea = document.getElementById("coupon-area");
 
 couponField.addEventListener("keyup", function (e) {
-  if (totalPrice === 2200) {
+  if (seatCount === 4) {
     if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
       couponButton.removeAttribute("disabled");
       couponButton.classList.add("bg-theme-color");
@@ -100,6 +101,8 @@ formNumberField.addEventListener("keyup", function (e) {
         formSubmitButton.classList.add("bg-theme-color");
       }
     }
+  } else {
+    formSubmitButton.classList.remove("bg-theme-color");
   }
 });
 
