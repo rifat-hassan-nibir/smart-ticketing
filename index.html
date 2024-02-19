@@ -208,9 +208,9 @@
             </div>
 
             <!-- Green Line Paribahan section -->
-            <section class="bg-white rounded-3xl flex mb-7">
-              <div class="p-8 w-9/12">
-                <div class="flex justify-between">
+            <section class="bg-white rounded-3xl flex flex-col-reverse lg:flex-row mb-7">
+              <div class="p-8 w-full lg:w-9/12">
+                <div class="flex flex-col lg:flex-row justify-between">
                   <div class="flex items-center gap-[14px]">
                     <div><img src="images/bus-logo.png" alt="" /></div>
                     <div>
@@ -239,8 +239,9 @@
                     <p class="text-lg font-bold text-[#030712]">9:00 PM</p>
                   </div>
                   <hr class="border-dashed border-[#03071233] border-2 my-4" />
+
                   <!-- Buttons -->
-                  <div class="flex justify-between gap-[24px]">
+                  <div class="flex flex-col lg:flex-row justify-between gap-[24px]">
                     <div
                       class="text-base py-[19px] px-[24px] bg-[#0307120c] text-[#030712cc] font-bold text-description-color rounded-xl font-inter"
                     >
@@ -259,8 +260,8 @@
                   </div>
                 </div>
               </div>
-              <div><img src="images/info-devider.png" alt="" /></div>
-              <div class="p-8 w-2/12 flex justify-center items-center">
+              <div><img class="hidden lg:block" src="images/info-devider.png" alt="" /></div>
+              <div class="p-8 w-full lg:w-2/12 flex justify-center items-center">
                 <div>
                   <img class="mx-auto mb-5" src="images/fare.png" alt="" />
                   <h3 class="text-[32px] text-title-color font-bold">550 Taka</h3>
@@ -271,8 +272,8 @@
 
             <!-- Select your seat section-->
             <section class="bg-white rounded-3xl">
-              <div class="flex p-8">
-                <div class="w-7/12 border-r-2 border-dashed border-[#03071233] pr-8">
+              <div class="flex flex-col lg:flex-row p-8">
+                <div class="w-full lg:w-7/12 lg:border-r-2 border-dashed border-[#03071233] lg:pr-8">
                   <h3 class="text-2xl font-semibold">Select Your Seats</h3>
                   <hr class="my-6 border-dashed border-[#03071233]" />
                   <div class="flex justify-between">
@@ -292,28 +293,32 @@
                     <!-- Seats Row -->
                     <!-- Driver -->
                     <div class="flex justify-end">
-                      <div class="bg-[#03071219] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="bg-[#03071219] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                         <img src="images/driver.png" alt="" />
                       </div>
                     </div>
                     <!-- First Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">A</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">A1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">A2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">A3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">A4</p>
                         </button>
                       </div>
@@ -321,22 +326,26 @@
 
                     <!-- Second Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">B</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">B1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">B2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">B3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">B4</p>
                         </button>
                       </div>
@@ -344,22 +353,26 @@
 
                     <!-- Third Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">C</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">C1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">C2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">C3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">C4</p>
                         </button>
                       </div>
@@ -367,22 +380,26 @@
 
                     <!-- Fourth Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">D</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">D1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">D2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">D3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">D4</p>
                         </button>
                       </div>
@@ -390,22 +407,26 @@
 
                     <!-- Fifth Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">E</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">E1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">E2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">E3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">E4</p>
                         </button>
                       </div>
@@ -413,22 +434,26 @@
 
                     <!-- Sixth Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">F</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">F1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">F2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">F3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">F4</p>
                         </button>
                       </div>
@@ -436,22 +461,26 @@
 
                     <!-- Seventh Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">G</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">G1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">G2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">G3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">G4</p>
                         </button>
                       </div>
@@ -459,22 +488,26 @@
 
                     <!-- Seventh Row -->
                     <div class="flex justify-between">
-                      <div class="flex gap-10 items-center">
+                      <div class="flex gap-5 lg:gap-10 items-center">
                         <p class="font-inter text-description-color text-lg font-medium">H</p>
-                        <div class="flex gap-10">
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <div class="flex gap-5 lg:gap-10">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">H1</p>
                           </button>
-                          <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                          <button
+                            class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]"
+                          >
                             <p class="font-inter text-description-color text-lg font-medium">H2</p>
                           </button>
                         </div>
                       </div>
-                      <div class="flex gap-10">
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                      <div class="flex gap-5 lg:gap-10">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">H3</p>
                         </button>
-                        <button class="seats bg-[#F7F8F8] px-[55px] py-[17px] rounded-[12px]">
+                        <button class="seats bg-[#F7F8F8] px-[20px] lg:px-[55px] py-[10px] lg:py-[17px] rounded-[12px]">
                           <p class="font-inter text-description-color text-lg font-medium">H4</p>
                         </button>
                       </div>
@@ -484,8 +517,8 @@
                 </div>
 
                 <!-- Customer details area -->
-                <div class="w-5/12 pl-8 border-l-2 border-dashed border-[#03071233]">
-                  <h3 class="text-2xl font-semibold">Select Your Seats</h3>
+                <div class="w-full lg:w-5/12 lg:pl-8 lg:border-l-2 border-dashed border-[#03071233]">
+                  <h3 class="text-2xl mt-10 lg:mt-0 font-semibold">Select Your Seats</h3>
                   <hr class="my-6 border-dashed border-[#03071233]" />
 
                   <!-- Ticket Details Area -->
@@ -592,7 +625,7 @@
       <!-- Footer Section Starts Here -->
       <footer class="bg-[#030712] py-[120px]">
         <section class="container mx-auto text-white">
-          <div class="flex justify-between mb-12">
+          <div class="flex flex-col lg:flex-row justify-between mb-12">
             <div class="space-y-4">
               <h2 class="text-4xl font-extrabold">P-Ticket</h2>
               <p class="font-inter text-lg font-light w-[320px] text-[#ffffffcc] leading-9">
@@ -607,11 +640,11 @@
 
           <hr class="border-2 border-dashed border-[#ffffff4c] mb-8" />
 
-          <div class="flex justify-between">
+          <div class="flex flex-col lg:flex-row justify-between">
             <p class="text-base text-[#ffffffb2] font-inter font-light">
               @all rights reserved, P-Ticket services limited.2024
             </p>
-            <div class="flex gap-8">
+            <div class="flex flex-col lg:flex-row gap-8">
               <a class="font-inter text-base text-white font-medium" href="">Terms & condition</a>
               <a class="font-inter text-base text-white font-medium" href="">Return & refund policy</a>
               <a class="font-inter text-base text-white font-medium" href="">Privacy policy</a>
