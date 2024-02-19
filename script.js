@@ -99,4 +99,5 @@ formSubmitButton.addEventListener("click", function () {
 document.getElementById("continue-button").addEventListener("click", function () {
   document.getElementById("main-body").classList.remove("hidden");
   document.getElementById("modal-body").classList.add("hidden");
+  location.reload();
 });
