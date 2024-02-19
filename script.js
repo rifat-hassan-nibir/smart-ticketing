@@ -87,6 +87,7 @@ couponField.addEventListener("keyup", function (e) {
       couponButton.classList.remove("bg-theme-color");
     }
   } else {
+    couponField.value = "";
     alert("Select 4 tickets to get discount");
   }
 });
