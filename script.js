@@ -89,6 +89,14 @@ formSubmitButton.addEventListener("click", function () {
   if (totalPrice === 0 || formNumberField.value.length !== 11) {
     alert("Select at least 1 seat and enter a phone number with 11 digits");
   } else {
-    alert("Form Submitted");
+    document.getElementById("main-body").classList.add("hidden");
+    document.getElementById("modal-body").classList.remove("hidden");
   }
+});
+
+// Modal button functionality
+
+document.getElementById("continue-button").addEventListener("click", function () {
+  document.getElementById("main-body").classList.remove("hidden");
+  document.getElementById("modal-body").classList.add("hidden");
 });
