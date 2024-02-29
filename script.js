@@ -3,6 +3,7 @@
 let seatCount = 0;
 let availableSeats = 40;
 let totalPrice = 0;
+let selectedSeat = true;
 
 const formNumberField = document.getElementById("form-number");
 const formSubmitButton = document.getElementById("form-submit-button");
@@ -18,6 +19,16 @@ for (const seat of seats) {
       seat.childNodes[1].classList.add("text-white");
       seatCount++;
       availableSeats--;
+
+      // Changing the color of coupon button
+      if (seatCount === 4) {
+        addThemeColor(couponButton);
+      }
+
+      // Checking for valid number in form field to change the color of the form submit button
+      if (formNumberField.value.length === 11) {
+        addThemeColor(formSubmitButton);
+      }
 
       // Updating remaining seats
       setInnerTextById("seats-left", availableSeats);
@@ -58,24 +69,6 @@ couponField.addEventListener("keyup", function (e) {
   if (seatCount === 4) {
     if (e.target.value === "NEW15" || e.target.value === "Couple 20") {
       couponButton.removeAttribute("disabled");
-      if (e.target.value === "NEW15") {
-        couponButton.addEventListener("click", function () {
-          const discountedPrice = totalPrice * 0.15;
-          const newPrice = totalPrice - discountedPrice;
-          priceSummaryDiv(0.15);
-          setInnerTextById("grand-total-price", newPrice);
-          couponArea.classList.add("hidden");
-        });
-      } else if (e.target.value === "Couple 20") {
-        couponButton.addEventListener("click", function () {
-          const discountedPrice = totalPrice * 0.2;
-          const newPrice = totalPrice - discountedPrice;
-          priceSummaryDiv(0.2);
-          setInnerTextById("grand-total-price", newPrice);
-          couponArea.classList.add("hidden");
-          setInnerTextById("grand-total-price", newPrice);
-        });
-      }
     } else {
       couponButton.setAttribute("disabled", true);
     }
@@ -85,7 +78,36 @@ couponField.addEventListener("keyup", function (e) {
   }
 });
 
+// Different discount for different coupon
+couponButton.addEventListener("click", function () {
+  if (couponField.value === "NEW15") {
+    const discountedPrice = totalPrice * 0.15;
+    const newPrice = totalPrice - discountedPrice;
+    priceSummaryDiv(0.15);
+    setInnerTextById("grand-total-price", newPrice);
+    couponArea.classList.add("hidden");
+  } else if (couponField.value === "Couple 20") {
+    const discountedPrice = totalPrice * 0.2;
+    const newPrice = totalPrice - discountedPrice;
+    priceSummaryDiv(0.2);
+    setInnerTextById("grand-total-price", newPrice);
+    couponArea.classList.add("hidden");
+    setInnerTextById("grand-total-price", newPrice);
+  }
+});
+
 // Form Functionality
+
+// Checking if seat is selected or not after entering an valid number
+formNumberField.addEventListener("keyup", function () {
+  if (formNumberField.value.length === 11 && seatCount > 0) {
+    addThemeColor(formSubmitButton);
+  } else {
+    removeThemeColor(formSubmitButton);
+  }
+});
+
+// Form submit button functionality
 
 formSubmitButton.addEventListener("click", function () {
   if (totalPrice === 0 || formNumberField.value.length !== 11) {

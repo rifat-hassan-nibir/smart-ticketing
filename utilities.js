@@ -15,3 +15,13 @@ function priceSummaryDiv(discountAmount) {
           `;
   priceSummary.appendChild(discountedPriceDiv);
 }
+
+function addThemeColor(element) {
+  element.classList.remove("bg-gray-400");
+  element.classList.add("bg-theme-color");
+}
+
+function removeThemeColor(element) {
+  element.classList.add("bg-gray-400");
+  element.classList.remove("bg-theme-color");
+}
